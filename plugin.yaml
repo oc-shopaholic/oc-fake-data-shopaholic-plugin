@@ -1,0 +1,6 @@
+plugin:
+    name: 'lovata.fakedatashopaholic::lang.plugin.name'
+    description: 'lovata.fakedatashopaholic::lang.plugin.description'
+    author: LOVATA
+    icon: oc-icon-database
+    homepage: ''

@@ -1,0 +1,69 @@
+id,name,code,price,old_price,product_id
+1,Destroyed Cropped Jeans - Blue - S,1202-0001-S,23.20,45.15,2
+2,Destroyed Cropped Jeans - Blue - M,1202-0001-M,23.20,45.15,2
+3,Destroyed Cropped Jeans - Blue - L,1202-0001-L,23.20,45.15,2
+4,Distressed Skinny Jeans - White - S,1205-0002-S,19.93,34.46,3
+5,Distressed Skinny Jeans - White - M,1205-0002-M,19.93,34.46,3
+6,Distressed Skinny Jeans - White - L,1205-0002-L,19.93,34.46,3
+7,Distressed Skinny Jeans - White - XL,1205-0002-XL,19.93,34.46,3
+8,Lace Insert Staright Jeans - Blue - S,1205-0003-S,27.02,0,4
+9,Lace Insert Staright Jeans - Blue - M,1205-0003-M,27.02,0,4
+10,Ripped Raw Hem Side Stripe Jeans - Denim Blue - M,1208-0004-M,21.11,45.02,5
+11,Ripped Raw Hem Side Stripe Jeans - Denim Blue - L,1208-0004-L,21.11,45.02,5
+12,Ripped Raw Hem Side Stripe Jeans - Denim Blue - XL,1208-0004-XL,21.11,45.02,5
+13,Skinny High Waist Jeans - Black - S,1205-0005-S,24.09,30.11,9
+14,Skinny High Waist Jeans - Black - M,1205-0005-M,24.09,30.11,9
+15,Skinny High Waist Jeans - Black - L,1205-0005-L,24.09,30.11,9
+16,Floral Embroidered Skinny High Waisted Jeans - Blue - M,1210-0006-M,17.41,36.85,10
+17,Floral Embroidered Skinny High Waisted Jeans - Blue - L,1210-0006-L,17.41,36.85,10
+18,Skinny Frayed Ripped Jeans - Blue - S,1210-0007-S,16.11,34.44,6
+19,Skinny Frayed Ripped Jeans - Blue - M,1210-0007-M,16.11,34.44,6
+20,Skinny Frayed Ripped Jeans - Blue - L,1210-0007-L,16.11,34.44,6
+21,Two Tone Color Ripped Jeans - Blue - S,1202-0008-S,22.35,33.57,7
+22,Two Tone Color Ripped Jeans - Blue - M,1202-0008-M,22.35,33.57,7
+23,Two Tone Color Ripped Jeans - Blue - L,1202-0008-L,22.35,33.57,7
+24,Two Tone Color Ripped Jeans - Blue - XL,1202-0008-XL,22.35,33.57,7
+25,Distressed High Rise Colored Skinny Jeans - Red - S,1204-0009-S,24.01,0,8
+26,Distressed High Rise Colored Skinny Jeans - Red - M,1204-0009-M,24.01,0,8
+27,Distressed High Rise Colored Skinny Jeans - Red - L,1204-0009-L,24.01,0,8
+28,Distressed High Rise Colored Skinny Jeans - Red - XL,1204-0009-XL,24.01,0,8
+29,Knee Length Lace Insert Denim Shorts - Light Blue - S,1204-0010-S,18.47,36.07,1
+30,Knee Length Lace Insert Denim Shorts - Light Blue - M,1204-0010-M,18.47,36.07,1
+31,Knee Length Lace Insert Denim Shorts - Light Blue - L,1204-0010-L,18.47,36.07,1
+32,Off The Shoulder Crochet Trimmed Rib Top - Black - S,1305-0011-S,13.49,23.16,11
+33,Off The Shoulder Crochet Trimmed Rib Top - Black - M,1305-0011-M,13.49,23.16,11
+34,Off The Shoulder Crochet Trimmed Rib Top - Black - L,1305-001-L,13.49,23.16,11
+35,Cold Shoulder Floral Cut Out T-shirt - Cadetblue - S,1307-0012-S,16.54,0,12
+36,Cold Shoulder Floral Cut Out T-shirt - Cadetblue - M,1307-0012-M,16.54,0,12
+37,Cold Shoulder Floral Cut Out T-shirt - Cadetblue - L,1307-0012-L,16.54,0,12
+38,Cold Shoulder Floral Cut Out T-shirt - Cadetblue - XL,1307-0012-XL,16.54,0,12
+39,Sequins Cold Shoulder Long Sleeve T-shirt - Red - M,1301-0013-M,13.94,0,13
+40,Sequins Cold Shoulder Long Sleeve T-shirt - Red - L,1301-0013-L,13.94,0,13
+41,V Neck Cold Shoulder Tee - Black - S,1307-0014-S,12.36,38.55,14
+42,V Neck Cold Shoulder Tee - Black - M,1307-0014-M,12.36,38.55,14
+43,V Neck Cold Shoulder Tee - Black - L,1307-0014-L,12.36,38.55,14
+44,V Neck Cold Shoulder Tee - Black - XL,1307-0014-XL,12.36,38.55,14
+45,Criss Cross Floral Long Sleeve Top - Black - S,1313-0015-S,19.72,30.95,15
+46,Criss Cross Floral Long Sleeve Top - Black - M,1313-0015-M,19.72,30.95,15
+47,Criss Cross Floral Long Sleeve Top - Black - L,1313-0015-L,19.72,30.95,15
+48,Criss Cross Floral Long Sleeve Top - Black - XL,1313-0015-XL,19.72,30.95,15
+49,Butterfly Raglan Sleeve Lace Trim T-shirt - Blue - S,1307-0016-S,13.90,24.84,16
+50,Butterfly Raglan Sleeve Lace Trim T-shirt - Blue - M,1307-0016-M,13.90,24.84,16
+51,Butterfly Raglan Sleeve Lace Trim T-shirt - Blue - L,1307-0016-L,13.90,24.84,16
+52,Butterfly Raglan Sleeve Lace Trim T-shirt - Blue - XL,1307-0016-XL,13.90,24.84,16
+53,Chest Pocket Long Sleeve Casual Shirt - Cappuccino - S,1607-0017-S,25.47,38.01,17
+54,Chest Pocket Long Sleeve Casual Shirt - Cappuccino - M,1607-0017-M,25.47,38.01,17
+55,Chest Pocket Long Sleeve Casual Shirt - Cappuccino - L,1607-0017-L,25.47,38.01,17
+56,Chest Pocket Long Sleeve Casual Shirt - Cappuccino - XL,1607-0017-XL,25.47,38.01,17
+57,Plus Size Slimming Long Sleeve Shirt - White - S,1604-0018-S,11.88,24.51,18
+58,Plus Size Slimming Long Sleeve Shirt - White - M,1604-0018-M,11.88,24.51,18
+59,Plus Size Slimming Long Sleeve Shirt - White - L,1604-0018-L,11.88,24.51,18
+60,Plus Size Slimming Long Sleeve Shirt - White - XL,1604-0018-XL,11.88,24.51,18
+61,Chest Pocket Long Sleeve Casual Shirt - Khaki - S,1604-0019-S,25.47,0,19
+62,Chest Pocket Long Sleeve Casual Shirt - Khaki - M,1604-0019-M,25.47,0,19
+63,Chest Pocket Long Sleeve Casual Shirt - Khaki - L,1604-0019-L,25.47,0,19
+64,Chest Pocket Long Sleeve Casual Shirt - Khaki - XL,1604-0019-XL,25.47,0,19
+65,Long Sleeve Color Block Edging Shirt - Black - M,1611-0020-M,15.50,21.25,20
+66,Long Sleeve Color Block Edging Shirt - Black - L,1611-0020-L,15.50,21.25,20
+67,Long Sleeve Color Block Edging Shirt - Gray - L,1611-0021-L,15.50,21.25,21
+68,Long Sleeve Color Block Edging Shirt - Gray - XL,1611-0021-XL,15.50,21.25,21

@@ -1,0 +1,14 @@
+id,name,type,measure_id,description,sort,value
+1,Size,select,0,,1,S|M|L|XL
+2,Material,checkbox,0,,3,Jean|Cotton|Polyester|Spandex|Blends
+3,Length,select,0,,4,Capri|Normal|Ninth|Knee-Length
+4,Wash,input,0,,5,
+5,Fit Type,select,0,,6,Skinny|Regular|Straight
+6,Color,input,0,,2,
+7,Embellishment,checkbox,0,,7,Pockets|Ripped|Lace|Embroidery
+8,Elasticity,select,0,,8,Elastic
+9,Shirt Length,select,0,,9,Regular
+10,Sleeve Length,select,0,,10,Sleeveless|Three Quarter|Full|Short
+11,Style,select,0,,11,Fashion|Casual
+12,Season,select,0,,12,Fall|Spring|Summer|Winter
+13,Pattern Type,select,0,,13,Solid|Floral|Butterfly|Print

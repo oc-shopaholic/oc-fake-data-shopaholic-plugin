@@ -1,0 +1,9 @@
+id,name,slug,parent_id,nest_depth,nest_left,nest_right,preview_image
+1,Women,women,0,1,1,8,women.jpg
+2,Jeans,jeans-women,1,2,2,3,jeans_women.png
+3,T-shirts,t-shirts-women,1,2,4,5,t_shirts_women.jpg
+4,Skirts,skirts,1,2,6,7,skirts.jpg
+5,Man,man,0,1,9,16,man.jpg
+6,Shirts,shirts-man,5,2,10,11,shirts_man.jpg
+7,T-shirts,t-shirts-man,5,2,12,13,t_shirts_man.jpg
+8,Ties,ties,5,2,14,15,ties.png
