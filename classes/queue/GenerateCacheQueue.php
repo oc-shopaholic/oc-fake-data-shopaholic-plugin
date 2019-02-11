@@ -10,7 +10,17 @@ class GenerateCacheQueue
     {
         $obJob->delete();
 
-        $sItemClass = $arData['item'];
-        $sItemClass::make($arData['id']);
+        $sModelClass = array_get($arData, 'model');
+        $sItemClass = array_get($arData, 'item');
+        $iPage = array_get($arData, 'page');
+
+        $obElementList = $sModelClass::skip(($iPage - 1) * 100)->take(100)->get();
+        if ($obElementList->isEmpty()) {
+            return;
+        }
+
+        foreach ($obElementList as $obElement) {
+            $sItemClass::make($obElement->id, $obElement);
+        }
     }
 }
