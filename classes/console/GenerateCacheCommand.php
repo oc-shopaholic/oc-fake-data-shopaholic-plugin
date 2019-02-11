@@ -54,15 +54,15 @@ class GenerateCacheCommand extends Command
         }
 
         //Get all models
-        $obElementList = $sModelClass::all();
-        if ($obElementList->isEmpty()) {
+        $iCount = $sModelClass::count();
+        if ($iCount == 0) {
             return;
         }
 
-        foreach ($obElementList as $obElement) {
+        $iPageCount = ceil($iCount / 100);
 
-            $iElementID = $obElement->id;
-            Queue::pushOn( env('BRANCH_NAME').'cache', GenerateCacheQueue::class, ['item' => $sItemClass, 'id' => $iElementID]);
+        for ($i = 0; $i < $iPageCount; $i++) {
+            Queue::pushOn( env('BRANCH_NAME').'cache', GenerateCacheQueue::class, ['model' => $sModelClass, 'item' => $sItemClass, 'page' => $i]);
         }
     }
 }
