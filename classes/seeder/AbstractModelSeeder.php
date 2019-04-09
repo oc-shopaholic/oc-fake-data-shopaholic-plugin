@@ -16,6 +16,7 @@ abstract class AbstractModelSeeder
 
     protected $sContentType;
     protected $iRepeatLimit;
+    protected $bSkipFirstColumn = true;
 
     protected $sTableName;
     protected $sFilePath;
@@ -130,8 +131,13 @@ abstract class AbstractModelSeeder
             return;
         }
 
+        $sFileName = array_shift($this->arRowData);
+        if (empty($sFileName)) {
+            return;
+        }
+
         $obImage = new File();
-        $obImage->fromFile($this->sImagePath.$sFolderName.'/'.array_shift($this->arRowData));
+        $obImage->fromFile($this->sImagePath.$sFolderName.'/'.$sFileName);
         $this->obModel->preview_image()->add($obImage);
         $this->obModel->save();
     }
@@ -185,7 +191,9 @@ abstract class AbstractModelSeeder
         while (($arRow = fgetcsv($this->obFile)) !== false) {
 
             //Always skip first column
-            array_shift($arRow);
+            if ($this->bSkipFirstColumn) {
+                array_shift($arRow);
+            }
             if(empty($arRow)) {
                 continue;
             }

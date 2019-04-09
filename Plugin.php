@@ -16,6 +16,7 @@ class Plugin extends PluginBase
     {
         $this->registerConsoleCommand('shopaholic:item.generate.cache', 'Lovata\FakeDataShopaholic\Classes\Console\GenerateCacheCommand');
         $this->registerConsoleCommand('shopaholic:generate.fake.data', 'Lovata\FakeDataShopaholic\Classes\Console\GenerateFakeDataCommand');
+        $this->registerConsoleCommand('shopaholic:generate.theme.fake.data', 'Lovata\FakeDataShopaholic\Classes\Console\GenerateFakeThemeDataCommand');
     }
 
     /**
