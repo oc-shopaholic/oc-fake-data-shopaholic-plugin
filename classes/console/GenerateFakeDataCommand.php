@@ -3,6 +3,7 @@
 use Illuminate\Console\Command;
 
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederAccessories;
+use Lovata\FakeDataShopaholic\Classes\Seeder\SeederAccessoriesFromFile;
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederBrand;
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederCategory;
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederMeasure;
@@ -19,6 +20,7 @@ use Lovata\FakeDataShopaholic\Classes\Seeder\SeederPropertySet;
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederPropertySetLink;
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederPropertyValue;
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederRelatedProducts;
+use Lovata\FakeDataShopaholic\Classes\Seeder\SeederRelatedProductFromFile;
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederReviews;
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederShippingType;
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederSystemImages;
@@ -60,11 +62,25 @@ class GenerateFakeDataCommand extends Command
         SeederShippingType::class,
         SeederReviews::class,
         SeederRelatedProducts::class,
+        SeederRelatedProductFromFile::class,
         SeederAccessories::class,
+        SeederAccessoriesFromFile::class,
     ];
 
     protected $arContentType = [
-        'clothes'
+        'clothes',
+        'sneakers',
+    ];
+
+    protected $arSkipSeeder = [
+        'clothes' => [
+            SeederRelatedProductFromFile::class,
+            SeederAccessoriesFromFile::class,
+        ],
+        'sneakers' => [
+            SeederRelatedProducts::class,
+            SeederAccessories::class,
+        ],
     ];
 
     /**
@@ -73,14 +89,13 @@ class GenerateFakeDataCommand extends Command
      */
     public function handle()
     {
-        $iContentType = (int) $this->choice('Select content type', $this->arContentType, 0);
+        $sContentType = $this->choice('Select content type', $this->arContentType, 0);
         $iRepeatLimit = (int) $this->ask('How many times to repeat the creating of products? Enter a value from 1 to 1000', 1);
 
-        if (!isset($this->arContentType[$iContentType])) {
-            $iContentType = 0;
+        if (!in_array($sContentType, $this->arContentType)) {
+            $sContentType = 'clothes';
         }
 
-        $sContentType = $this->arContentType[$iContentType];
         if ($iRepeatLimit < 1) {
             $iRepeatLimit = 1;
         }
@@ -90,6 +105,10 @@ class GenerateFakeDataCommand extends Command
         }
 
         foreach ($this->arSeederList as $sClassName) {
+            if (in_array($sClassName, $this->arSkipSeeder[$sContentType])) {
+                continue;
+            }
+
             /** @var \Lovata\FakeDataShopaholic\Classes\Seeder\AbstractModelSeeder $obSeeder */
             $obSeeder = new $sClassName($sContentType, $iRepeatLimit);
             $obSeeder->run();

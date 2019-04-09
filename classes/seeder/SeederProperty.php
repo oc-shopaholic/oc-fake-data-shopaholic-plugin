@@ -10,7 +10,7 @@ class SeederProperty extends AbstractModelSeeder
     protected $sTableName = 'lovata_properties_shopaholic_properties';
     protected $sFilePath = 'property_list.csv';
 
-    protected $arFieldList = ['active', 'name', 'type', 'measure_id', 'description', 'sort_order'];
+    protected $arFieldList = ['active', 'name', 'code', 'type', 'measure_id', 'description', 'sort_order'];
 
     /** @var \Lovata\PropertiesShopaholic\Models\Property */
     protected $obModel;
