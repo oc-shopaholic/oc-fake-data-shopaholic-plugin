@@ -59,8 +59,6 @@ class SeederProduct extends AbstractModelSeeder
                 continue;
             }
 
-
-
             $arRowList[] = $arRow;
         }
 
