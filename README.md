@@ -11,6 +11,13 @@ Fills catalog with fake data. Catalog will be cleared before filling.
 php artisan shopaholic:generate.fake.data
 ```
 
+### **shopaholic:generate.theme.fake.data**
+
+Fills theme settings with fake data.
+```bash
+php artisan shopaholic:generate.theme.fake.data
+```
+
 ## Get involved
 
 If you're interested in the improvement of this project you can help in the following ways:
