@@ -47,6 +47,11 @@ class SeederPropertyValue extends AbstractModelSeeder
                 'value' => $sValue,
                 'slug'  => PropertyValue::getSlugValue($sValue),
             ]);
+
+            $obProperty = $obValue->property->find(array_get($arLinkData, 'property_id'));
+            if (empty($obProperty)) {
+                $obValue->property()->attach(array_get($arLinkData, 'property_id'));
+            }
         } catch (\October\Rain\Database\ModelException $obException) {
             echo $obException->getMessage();
             return;
