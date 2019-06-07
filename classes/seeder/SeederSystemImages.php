@@ -31,8 +31,13 @@ class SeederSystemImages extends Seeder
                 continue;
             }
 
-            $obFile->deleteThumbs();
-            $obFile->delete();
+            try {
+                $obFile->deleteThumbs();
+            } catch (\Exception $obException) {}
+
+            try {
+                $obFile->delete();
+            } catch (\Exception $obException) {}
         }
     }
 }

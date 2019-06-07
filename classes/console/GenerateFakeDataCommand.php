@@ -1,6 +1,7 @@
 <?php namespace Lovata\FakeDataShopaholic\Classes\Console;
 
 use Illuminate\Console\Command;
+use Symfony\Component\Console\Input\InputOption;
 
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederAccessories;
 use Lovata\FakeDataShopaholic\Classes\Seeder\SeederAccessoriesFromFile;
@@ -84,13 +85,32 @@ class GenerateFakeDataCommand extends Command
     ];
 
     /**
+     * Get the console command options.
+     * @return array
+     */
+    protected function getOptions()
+    {
+        return [
+            ['content', null, InputOption::VALUE_OPTIONAL, 'Content type', null],
+            ['repeat', null, InputOption::VALUE_OPTIONAL, 'Repeat', null],
+        ];
+    }
+
+    /**
      * Execute the console command.
      * @return void
      */
     public function handle()
     {
-        $sContentType = $this->choice('Select content type', $this->arContentType, 0);
-        $iRepeatLimit = (int) $this->ask('How many times to repeat the creating of products? Enter a value from 1 to 1000', 1);
+        $sContentType = $this->option('content');
+        if (empty($sContentType)) {
+            $sContentType = $this->choice('Select content type', $this->arContentType, 0);
+        }
+
+        $iRepeatLimit = $this->option('repeat');
+        if (empty($iRepeatLimit)) {
+            $iRepeatLimit = (int) $this->ask('How many times to repeat the creating of products? Enter a value from 1 to 1000', 1);
+        }
 
         if (!in_array($sContentType, $this->arContentType)) {
             $sContentType = 'clothes';
