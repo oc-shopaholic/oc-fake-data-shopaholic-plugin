@@ -1,6 +1,6 @@
 <?php namespace Lovata\FakeDataShopaholic\Classes\ThemeSeeder;
 
-use Cms\Models\ThemeExport;
+use Cms\Models\ThemeData;
 
 /**
  * Class SneakersThemeSeeder
@@ -27,14 +27,14 @@ class SneakersThemeSeeder extends AbstractThemeSeeder
      */
     protected function seedThemeData()
     {
-        $obThemeData = ThemeExport::where('theme', self::THEME_CODE)->first();
+        $obThemeData = ThemeData::where('theme', self::THEME_CODE)->first();
         if (empty($obThemeData)) {
-            ThemeExport::create([
+            ThemeData::create([
                 'theme' => self::THEME_CODE,
-                'data' => $this->sThemeData,
+                'data' => $this->getThemeData(),
             ]);
         } else {
-            $obThemeData->data = $this->sThemeData;
+            $obThemeData->data = $this->getThemeData();
             $obThemeData->save();
         }
     }
@@ -57,5 +57,14 @@ class SneakersThemeSeeder extends AbstractThemeSeeder
 
             copy($sFolderPath.'/'.$sFileName, storage_path('app/media/'.$sFileName));
         }
+    }
+
+    /**
+     * Get theme data array
+     * @return array
+     */
+    protected function getThemeData()
+    {
+        return json_decode($this->sThemeData, true);
     }
 }
