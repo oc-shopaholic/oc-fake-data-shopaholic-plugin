@@ -2,16 +2,6 @@
 
 E-Commerce plugin by [LOVATA](https://lovata.com) for October CMS.
 
-## Installation
-
-This plugin isn't published in the OctoberCMS marketplace. So it shoud=ld be installed manually.
-
-```bash
-cd project_dir
-git clone git@github.com:oc-shopaholic/oc-fake-data-shopaholic-plugin.git plugins/lovata/fakedatashopaholic
-rm -rf plugins/lovata/fakedatashopaholic/.git
-```
-
 ## Artisan command list
 
 ### **shopaholic:generate.fake.data**
