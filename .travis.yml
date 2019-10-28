@@ -1,0 +1,83 @@
+language: php
+
+# cache:
+#   directories:
+#     - $HOME/.composer/cache/files
+
+php:
+  # - 7.0
+  # - 7.1
+  - 7.2
+  # - 7.3
+  # - nightly
+
+# services:
+#   - mysql
+
+# before_install:
+#   - mysql -e 'CREATE DATABASE test CHARACTER SET utf8 COLLATE utf8_general_ci;'
+
+# matrix:
+#   allow_failures:
+#     - php: nightly
+
+# sudo: false
+
+# install:
+#   - if [[ "$BUILD" != true ]]; then
+#       composer require satooshi/php-coveralls:~0.6@stable;
+#     fi
+
+# before_script:
+#   - if [[ "$BUILD" != true ]]; then
+#       mkdir -p build/logs;
+#       git clone https://github.com/octobercms/october.git october/;
+#       cd october;
+#       composer install;
+#       php artisan october:env;
+#       sed -i "s/=database/=test/" .env;
+#       php artisan october:up;
+#       php artisan plugin:install Lovata.Toolbox;
+#       cd ..;
+#       mkdir -p ./october/plugins/lovata/shopaholic;
+#       mv !(october) october/plugins/lovata/shopaholic;
+#       FOLDER_PATH=$(pwd);
+#       ln -s $FOLDER_PATH/october/plugins/lovata/ $FOLDER_PATH/october/tests/fixtures/plugins/lovata;
+#       cd october/plugins/lovata/shopaholic;
+#     fi
+
+# script:
+#   - ../../../vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+# after_success:
+#   - if [[ "$BUILD" != true ]]; then
+#       sh -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then php vendor/bin/coveralls -v; fi;'
+#     fi
+
+jobs:
+  include:
+    - stage: Empty build
+      script:
+        - echo 'No unit tests at the moment. Sorry!'
+    - stage: Release
+      if: tag IS present
+      env:
+        - BUILD=true
+      script:
+        - NAME="oc-fake-data-shopaholic-plugin"
+        - zip -r $NAME ./ -x .git/\* -x .gitignore -x .travis.yml -x crowdin.yml -x .editorconfig -x .codeclimate.yml -x PHPMD_custom.xml -x composer.json -x composer.lock -x vendor/\*
+        - TAG=$(git describe --tags)
+        - FILE="./$NAME.zip"
+        - if [[ -e $FILE ]]; then
+            NEW_NAME="$NAME-$TAG.$TRAVIS_JOB_ID";
+            mv $NAME.zip $NEW_NAME.zip;
+          fi
+      deploy:
+        provider: releases
+        api_key:
+          secure: zv93WfQOTgpyr7J67/a2wvTp/0AOm890R66H5pBcdZUGmCzZbWdpOg2sF2uCiBSnmN+979GjJ+3e/X8cJh+UvcEtcsEydldTnACEiNq0bGUzULTa5q4bKudxnZogxMeVyc2qwKWAxtFKStv/xKOUJpBsINfk344j/OwjYzFban/wE8sFpWnp5VifpyzA9bC4wslAeNdRWIzyIpx2cahSmhLzJkdBfpxBveQjqm+nb9BrXA1a/jW2WHYgDv7yH0FqmtECi4ou1o61ZktwKQoMkzbnuaM3oKxTL7CSwPc5o6djex/vU5S44OXEgknaA4OllVkeMMAvCgQIslU7z56sF5S4DAq3N/seYeU3puGIfnwW+55Qy6MaoY92FivIEe4s+WY6+FZCk+XgLIK31EowJlM4QNojcVy66EnBvtrDhLq6KnsMy6BjHcaty/nOsuxbHjNnRlIW7TrS5FKA1iV0H1WSAt/oOrzdroj8BAn4gKoiXqN7vsdP54eaSCkLLZira/sBSGIWK0/eAJpdX+FLmDdbwXuzrz7k7TQZ1PetrwjD6TwJXrQCqTULXqakFPO/cLLGQQBIW1wdn1r5vQtUZTgfsOMSC7TR8pk5vdwZ3cc3dC6pNl1jeYKjNJGppM3Oea/EKY5upSumFOuNFxHG1D8hgOnBhMDOCs45+mwUuHc=
+        file: "$NEW_NAME.zip"
+        skip_cleanup: true
+        on:
+          tags: true
+          repo: oc-shopaholic/oc-fake-data-shopaholic-plugin
