@@ -3,6 +3,7 @@
 use Illuminate\Console\Command;
 
 use Lovata\FakeDataShopaholic\Classes\ThemeSeeder\SneakersThemeSeeder;
+use Symfony\Component\Console\Input\InputOption;
 
 /**
  * Class GenerateFakeThemeDataCommand
@@ -21,7 +22,10 @@ class GenerateFakeThemeDataCommand extends Command
      */
     protected $description = 'Generate fake data for theme';
 
-    protected $arThemeList = [
+    /**
+     * @var array
+     */
+    protected static $arThemeList = [
         'sneakers' => SneakersThemeSeeder::class,
     ];
 
@@ -31,16 +35,57 @@ class GenerateFakeThemeDataCommand extends Command
      */
     public function handle()
     {
-        $arThemeList = array_keys($this->arThemeList);
-        $sThemeName = $this->choice('Select theme', $arThemeList, 0);
+        $arThemeList = array_keys(self::$arThemeList);
+
+        $sThemeName = $this->option('theme');
+
+        if (empty($sThemeName)) {
+            $sThemeName = $this->choice('Select theme', $arThemeList, 0);
+        }
+
         if (!in_array($sThemeName, $arThemeList)) {
             $sThemeName = 'sneakers';
         }
 
-        $sClassName = $this->arThemeList[$sThemeName];
+        $sClassName = self::$arThemeList[$sThemeName];
 
         /** @var \Lovata\FakeDataShopaholic\Classes\ThemeSeeder\AbstractThemeSeeder $obSeeder */
         $obSeeder = new $sClassName();
         $obSeeder->seed();
+    }
+
+    /**
+     * Get themes
+     *
+     * @return array
+     */
+    public static function getThemes() : array
+    {
+        $arThemes = self::$arThemeList;
+
+        if (!isset($arThemes) || !is_array($arThemes)) {
+            return [];
+        }
+
+        $arThemes = array_keys($arThemes);
+
+        return $arThemes;
+    }
+
+    /**
+     * Get the console command options.
+     * @return array
+     */
+    protected function getOptions() : array
+    {
+        return [
+            [
+                'theme',
+                null,
+                InputOption::VALUE_OPTIONAL,
+                'Theme',
+                null
+            ],
+        ];
     }
 }

@@ -1,0 +1,86 @@
+<div id="cachesizes" class="report-widget">
+    <h3>
+        <?= e(trans('lovata.fakedatashopaholic::lang.widget.fake_data')) ?>
+    </h3>
+
+    <?-- Generate fake data ?>
+
+    <div class="form-group span-full">
+        <div class="field-section">
+            <h4>
+                <?= e(trans('lovata.fakedatashopaholic::lang.message.generate_fake_data')) ?>
+            </h4>
+        </div>
+    </div>
+    <form class="form-elements" role="form">
+        <div class="form-group dropdown-field span-full is-required">
+            <label>
+                <?= e(trans('lovata.fakedatashopaholic::lang.field.content')) ?>
+            </label>
+            <select class="form-control custom-select" name="content">
+                <?php foreach($arContentType as $sKey => $sName) { ?>
+                    <option value="<?= $sKey ?>"><?= $sName ?></option>
+                <?php } ?>
+            </select>
+            <p class="help-block">
+                <?= e(trans('lovata.fakedatashopaholic::lang.message.select_content_type')) ?>
+            </p>
+        </div>
+        <div class="form-group text-field span-full is-required">
+            <label>
+                <?= e(trans('lovata.fakedatashopaholic::lang.field.repeat')) ?>
+            </label>
+            <input type="text" name="repeat" value="1" min="1" max="1000" class="form-control"/>
+            <p class="help-block">
+                <?= e(trans('lovata.fakedatashopaholic::lang.message.how_many_times_to_repeat_the_creating_of_products')) ?>
+            </p>
+        </div>
+        <div class="form-group text-field span-full">
+            <button
+                type="button"
+                data-request="onGenerateFakeData"
+                class="btn btn-primary icon-refresh"
+                data-stripe-load-indicator
+                data-request-confirm="<?= e(trans('lovata.fakedatashopaholic::lang.message.generate_fake_data')).'?' ?>"
+            >
+                <?= e(trans('lovata.fakedatashopaholic::lang.button.generate')) ?>
+            </button>
+        </div>
+    </form>
+
+    <?-- Generate fake data for theme ?>
+
+    <div class="form-group span-full">
+        <div class="field-section">
+            <h4>
+                <?= e(trans('lovata.fakedatashopaholic::lang.message.generate_fake_data_for_theme')) ?>
+            </h4>
+        </div>
+    </div>
+    <form class="form-elements" role="form">
+        <div class="form-group dropdown-field span-full is-required">
+            <label>
+                <?= e(trans('lovata.fakedatashopaholic::lang.field.theme')) ?>
+            </label>
+            <select class="form-control custom-select" name="theme">
+                <?php foreach($arThemes as $sKey => $sName) { ?>
+                    <option value="<?= $sKey ?>"><?= $sName ?></option>
+                <?php } ?>
+            </select>
+            <p class="help-block">
+                <?= e(trans('lovata.fakedatashopaholic::lang.message.select_theme')) ?>
+            </p>
+        </div>
+        <div class="form-group text-field span-full">
+            <button
+                type="button"
+                data-request="onGenerateFakeDataForTheme"
+                class="btn btn-primary icon-refresh"
+                data-stripe-load-indicator
+                data-request-confirm="<?= e(trans('lovata.fakedatashopaholic::lang.message.generate_fake_data_for_theme')).'?' ?>"
+            >
+                <?= e(trans('lovata.fakedatashopaholic::lang.button.generate')) ?>
+            </button>
+        </div>
+    </form>
+</div>
