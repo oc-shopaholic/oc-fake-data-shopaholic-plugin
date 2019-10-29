@@ -43,6 +43,9 @@ class GenerateFakeDataCommand extends Command
      */
     protected $description = 'Generate fake data';
 
+    /**
+     * @var array
+     */
     protected $arSeederList = [
         SeederPluginSettings::class,
         SeederSystemImages::class,
@@ -68,11 +71,9 @@ class GenerateFakeDataCommand extends Command
         SeederAccessoriesFromFile::class,
     ];
 
-    protected $arContentType = [
-        'clothes',
-        'sneakers',
-    ];
-
+    /**
+     * @var array
+     */
     protected $arSkipSeeder = [
         'clothes' => [
             SeederRelatedProductFromFile::class,
@@ -85,16 +86,12 @@ class GenerateFakeDataCommand extends Command
     ];
 
     /**
-     * Get the console command options.
-     * @return array
+     * @var array
      */
-    protected function getOptions()
-    {
-        return [
-            ['content', null, InputOption::VALUE_OPTIONAL, 'Content type', null],
-            ['repeat', null, InputOption::VALUE_OPTIONAL, 'Repeat', null],
-        ];
-    }
+    protected static $arContentType = [
+        'clothes',
+        'sneakers',
+    ];
 
     /**
      * Execute the console command.
@@ -104,7 +101,7 @@ class GenerateFakeDataCommand extends Command
     {
         $sContentType = $this->option('content');
         if (empty($sContentType)) {
-            $sContentType = $this->choice('Select content type', $this->arContentType, 0);
+            $sContentType = $this->choice('Select content type', self::$arContentType, 0);
         }
 
         $iRepeatLimit = $this->option('repeat');
@@ -112,7 +109,7 @@ class GenerateFakeDataCommand extends Command
             $iRepeatLimit = (int) $this->ask('How many times to repeat the creating of products? Enter a value from 1 to 1000', 1);
         }
 
-        if (!in_array($sContentType, $this->arContentType)) {
+        if (!in_array($sContentType, self::$arContentType)) {
             $sContentType = 'clothes';
         }
 
@@ -133,5 +130,45 @@ class GenerateFakeDataCommand extends Command
             $obSeeder = new $sClassName($sContentType, $iRepeatLimit);
             $obSeeder->run();
         }
+    }
+
+    /**
+     * Get content type
+     *
+     * @return array
+     */
+    public static function getContentType() : array
+    {
+        $arContentType = self::$arContentType;
+
+        if (!isset($arContentType) || !is_array($arContentType)) {
+            return [];
+        }
+
+        return $arContentType;
+    }
+
+    /**
+     * Get the console command options.
+     * @return array
+     */
+    protected function getOptions() : array
+    {
+        return [
+            [
+                'content',
+                null,
+                InputOption::VALUE_OPTIONAL,
+                'Content type',
+                null
+            ],
+            [
+                'repeat',
+                null,
+                InputOption::VALUE_OPTIONAL,
+                'Repeat',
+                null
+            ],
+        ];
     }
 }

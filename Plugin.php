@@ -2,6 +2,9 @@
 
 use System\Classes\PluginBase;
 
+// Widgets
+use Lovata\FakeDataShopaholic\Widgets\GenerateData;
+
 /**
  * Class Plugin
  * @package Lovata\FakeDataShopaholic
@@ -32,5 +35,17 @@ class Plugin extends PluginBase
      */
     protected function addEventListener()
     {
+    }
+
+    /**
+     * @return array
+     */
+    public function registerReportWidgets()
+    {
+        return [
+            GenerateData::class => [
+                'label' => 'lovata.fakedatashopaholic::lang.widget.fake_data',
+            ],
+        ];
     }
 }

@@ -6,6 +6,7 @@
 /temp
 
 #app
+build.sh
 /app/vendor
 /app/themes/*/content/*
 /app/tests/fixtures/plugins/lovata/
