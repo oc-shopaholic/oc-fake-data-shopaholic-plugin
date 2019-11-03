@@ -82,7 +82,7 @@ All this guarantees the stable work of our plugins after they are updated with n
 
 If you're interested in the improvement of Shopaholic project you can help in the following ways:
 * bug reporting and new feature requesting by creating issues on plugin [GitHub page](https://github.com/oc-shopaholic/oc-fake-data-shopaholic-plugin/issues);
-* contribution to a project following these [instructions](https://github.com/oc-shopaholic/oc-fake-data-shopaholic-plugin/master/CONTRIBUTING.md);
+* contribution to a project following these [instructions](https://github.com/oc-shopaholic/oc-fake-data-shopaholic-plugin/blob/master/CONTRIBUTING.md);
 * localization to your language using [Crowdin](https://crowdin.com/project/oc-fake-data-for-shopaholic) service.
 
 Let us know if you have any other questions, ideas or suggestions! Just drop a line at [info@shopaholic.one](mailto:info@shopaholic.one).

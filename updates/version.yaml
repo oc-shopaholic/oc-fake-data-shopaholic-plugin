@@ -1,2 +1,4 @@
 1.0.0:
     - 'Initialize plugin.'
+1.0.1:
+    - 'Fixed error with tags in widget partial'
