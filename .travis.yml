@@ -17,12 +17,6 @@ php:
 # before_install:
 #   - mysql -e 'CREATE DATABASE test CHARACTER SET utf8 COLLATE utf8_general_ci;'
 
-# matrix:
-#   allow_failures:
-#     - php: nightly
-
-# sudo: false
-
 # install:
 #   - if [[ "$BUILD" != true ]]; then
 #       composer require satooshi/php-coveralls:~0.6@stable;

@@ -36,7 +36,7 @@ class GenerateCacheCommand extends Command
         $this->generateCache(\Lovata\ReviewsShopaholic\Models\Review::class, \Lovata\ReviewsShopaholic\Classes\Item\ReviewItem::class);
 
         $this->generateCache(\Lovata\PropertiesShopaholic\Models\Group::class, \Lovata\PropertiesShopaholic\Classes\Item\GroupItem::class);
-        $this->generateCache(\Lovata\PropertiesShopaholic\Models\Measure::class, \Lovata\PropertiesShopaholic\Classes\Item\MeasureItem::class);
+        $this->generateCache(\Lovata\Shopaholic\Models\Measure::class, \Lovata\Shopaholic\Classes\Item\MeasureItem::class);
         $this->generateCache(\Lovata\PropertiesShopaholic\Models\Property::class, \Lovata\PropertiesShopaholic\Classes\Item\PropertyItem::class);
         $this->generateCache(\Lovata\PropertiesShopaholic\Models\PropertySet::class, \Lovata\PropertiesShopaholic\Classes\Item\PropertySetItem::class);
         $this->generateCache(\Lovata\PropertiesShopaholic\Models\PropertyValue::class, \Lovata\PropertiesShopaholic\Classes\Item\PropertyValueItem::class);

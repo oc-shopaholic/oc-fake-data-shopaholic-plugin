@@ -83,6 +83,14 @@ class GenerateFakeDataCommand extends Command
             SeederRelatedProducts::class,
             SeederAccessories::class,
         ],
+        'fruits' => [
+            SeederBrand::class,
+            SeederRelatedProducts::class,
+            SeederRelatedProductFromFile::class,
+            SeederAccessories::class,
+            SeederAccessoriesFromFile::class,
+            SeederReviews::class,
+        ],
     ];
 
     /**
@@ -91,6 +99,7 @@ class GenerateFakeDataCommand extends Command
     protected static $arContentType = [
         'clothes',
         'sneakers',
+        'fruits',
     ];
 
     /**

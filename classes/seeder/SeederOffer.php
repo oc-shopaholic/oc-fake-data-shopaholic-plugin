@@ -12,7 +12,7 @@ class SeederOffer extends AbstractModelSeeder
     protected $sTableName = 'lovata_shopaholic_offers';
     protected $sFilePath = 'offer_list.csv';
 
-    protected $arFieldList = ['active', 'name', 'code', 'price', 'old_price', 'product_id'];
+    protected $arFieldList = ['active', 'name', 'code', 'price', 'old_price', 'product_id', 'quantity_in_unit', 'measure_of_unit_id'];
 
     /** @var \Lovata\Shopaholic\Models\Offer */
     protected $obModel;

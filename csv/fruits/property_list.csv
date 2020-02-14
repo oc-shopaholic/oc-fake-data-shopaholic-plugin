@@ -1,0 +1,5 @@
+id,name,code,type,measure_id,description,sort,value
+1,Protein,protein,number,3,,1,
+2,Fat,fat,number,3,,2,
+3,Carbohydrates,carbohydrates,number,3,,3,
+4,Energy value,energy-value,number,0,,4,
