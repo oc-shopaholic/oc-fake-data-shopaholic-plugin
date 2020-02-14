@@ -2,3 +2,5 @@
     - 'Initialize plugin.'
 1.0.1:
     - 'Fixed error with tags in widget partial'
+1.1.0:
+    - 'Added new catalog variant: fruits'
