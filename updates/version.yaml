@@ -1,6 +1,8 @@
 1.0.0:
     - 'Initialize plugin.'
 1.0.1:
-    - 'Fixed error with tags in widget partial'
+    - 'Fixed error with tags in widget partial.'
 1.1.0:
-    - 'Added new catalog variant: fruits'
+    - 'Added new catalog variant: fruits.'
+1.1.1:
+    - 'Fixed of property values in content set of fruits.'
