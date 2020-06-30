@@ -12,6 +12,9 @@ use Lovata\FakeDataShopaholic\Widgets\GenerateData;
  */
 class Plugin extends PluginBase
 {
+    /** @var array Plugin dependencies */
+    public $require = ['Lovata.Shopaholic'];
+
     /**
      * Register plugin method
      */
