@@ -19,6 +19,7 @@
     'message'   => [
         'generate_fake_data'                                => 'Генерация тестовых данных',
         'generate_fake_data_for_theme'                      => 'Генерация тестовых данных для темы',
+        'confirm_generate_fake_data'                        => 'Это действие удалит все существующие данные. Продолжить?',
         'select_content_type'                               => 'Выберите тип контента',
         'how_many_times_to_repeat_the_creating_of_products' => 'Сколько раз повторить создание продуктов? Введите значение от 1 до 1000',
         'select_theme'                                      => 'Выберите тему',

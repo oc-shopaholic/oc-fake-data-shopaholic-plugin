@@ -19,6 +19,7 @@
     'message'   => [
         'generate_fake_data'                                => 'Generate fake data',
         'generate_fake_data_for_theme'                      => 'Generate fake data for theme',
+        'confirm_generate_fake_data'                        => 'This action will delete all existing data. Proceed?',
         'select_content_type'                               => 'Select content type',
         'how_many_times_to_repeat_the_creating_of_products' => 'How many times to repeat the creating of products? Enter a value from 1 to 1000',
         'select_theme'                                      => 'Select theme',
