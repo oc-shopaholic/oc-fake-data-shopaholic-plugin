@@ -1,12 +1,70 @@
 id,name,code,price,old_price,product_id,quantity_in_unit,measure_of_unit_id
-1,Gala Apples,1000-0001,10.15,12,1,500,3
-2,Granny Smith Apples,1000-0002,12.4,,2,500,3
-3,Organic Bananas,2000-0001,8.99,10,3,500,3
-4,Baby Bananas,2000-0002,7.99,10,4,500,3
-5,Blueberries,3000-0001,28.99,32,5,100,3
-6,Red Cherries,3000-0002,24.99,30,6,100,3
-7,Season Grapefruit,4000-0001,14.99,16,7,500,3
-8,Organic Blood Orange,4000-0002,16.99,18.5,8,500,3
-9,Baby Seedless Watermelon,5000-0001,4.49,6.5,9,1,1
-10,Honeydew Melon,5000-0002,6.2,,10,1,1
-11,White Nectarine,6000-0001,22,,11,500,3
+1,Lemon,,10.15,,1,500,3
+2,Lime,,7.25,,2,500,3
+3,Green Grapes,,3,,3,500,3
+4,Black Grapes,,3.10,3.5,4,500,3
+5,Avocado,,15,12,5,500,3
+6,Banana,,2.5,3,6,500,3
+7,Pinaple,,6.55,,7,500,3
+8,Cherry,,4,,8,500,3
+9,Kiwi,,2.5,,9,500,3
+10,Pear,,2.7,3,10,500,3
+11,Melon,,10,,11,500,3
+12,Plum,,3.8,4,12,500,3
+13,Mandarine,,3,,13,500,3
+14,Mango,,6,,12,,500,3
+15,Apricot,,4.25,,15,500,3
+16,Apple,,1.15,,16,500,3
+17,Watermelon,,8.33,,17,500,3
+18,Potato,,1.15,,18,500,3
+19,Tomato,,2.4,,19,500,3
+20,Cucumber,,1.5,1.6,20,500,3
+21,Beet,,5.12,,500,3
+22,Brocolli,,2,,22,500,3
+23,Cabbage,,2.2,,23,500,3
+24,Capsicum Red,,7.4,8,24,500,3
+25,Carrot,,1.5,,25,500,3
+26,Cauliflower,,3.25,,26,500,3
+27,Garlic,,3.5,3.75,27,500,3
+28,Ginger,,3,,28,500,3
+29,Green Peas,,3.1,,29,500,3
+30,Onion,,2.65,,30,500,3
+31,Sponge Gourd,,6.85,,31,500,3
+32,Eggplant,,3.5,4,32,500,3
+33,Ground Cherry,,7,,33,500,3
+34,Gooseberry,,6.85,,34,500,3
+35,Cranberry,,3.65,3.75,35,500,3
+36,Strawberry,,3.5,,36,500,3
+37,Red Currant,,4.25,,37,500,3
+38,Raspberry,,6.75,7,38,500,3
+39,Forest Mix,,7.55,,39,500,3
+40,Blueberry,,7,,40,500,3
+41,Black Currant,,6.8,,41,500,3
+42,Blackberry,,11.25,,42,500,3
+43,Brazil Nut,,12.35,,43,500,3
+44,Pecan,,10.15,,44,500,3
+45,Hazelnut,,5.2,5.5,45,500,3
+46,Cashew,,10,12,46,500,3
+47,Pistachio,,13,12,47,500,3
+48,Walnut,,7.3,7.75,48,500,3
+49,Kidney Bean,,11.5,,49,500,3
+50,Sesame Rice,,4.15,,50,500,3
+51,Rolled Oats,,2.55,,51,500,3
+52,Jasmine Rice,,5.25,5.55,52,500,3
+53,Brown Rice,,6,,53,500,3
+54,Chanterelle,,10,,54,500,3
+55,Boletus,,8.1,,55,500,3
+56,Pleurotus,,6.5,6.65,56,500,3
+57,Champignon,,4.3,,57,500,3
+58,Shiitake,,4,,58,500,3
+59,Raisins,,5,,59,500,3
+60,Rainier Cherries,,7.4,,60,500,3
+61,Mixed Fruits,,12,,61,500,3
+62,Mission Figs,,9.45,10,62,500,3
+63,Dried Strawberries,,6.65,,63,500,3
+64,Dried Fig,,10,,64,500,3
+65,Dried Cranberries,,6.1,,65,500,3
+66,Dried Apricots,,6.6,7,66,500,3
+67,Diced Kiwi,,3.8,,67,500,3
+68,Honeycomb,,12,,68,500,3
+69,Honey,,15,12,12.5,500,3
