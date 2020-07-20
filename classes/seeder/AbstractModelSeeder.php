@@ -81,6 +81,13 @@ abstract class AbstractModelSeeder
         //Clear model data array
         $this->arModelData = [];
 
+        //Replace 'null' for null
+        foreach ($this->arRowData as $iKey => $sValue) {
+            if ($sValue == 'null') {
+                $this->arRowData[$iKey] = null;
+            }
+        }
+        
         foreach ($this->arFieldList as $sFieldName) {
 
             switch ($sFieldName) {
