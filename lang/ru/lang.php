@@ -6,7 +6,7 @@
     'field'     => [
         'clothes'  => 'Одежда',
         'sneakers' => 'Кроссовки',
-        'fruits'   => 'Фрукты',
+        'food'     => 'Еда',
         'content'  => 'Контент',
         'repeat'   => 'Повторить',
         'theme'    => 'Тема',
@@ -29,5 +29,6 @@
     ],
     'theme'     => [
         'sneakers' => 'Sneakers',
+        'biolia'   => 'Biolia',
     ],
 ];
