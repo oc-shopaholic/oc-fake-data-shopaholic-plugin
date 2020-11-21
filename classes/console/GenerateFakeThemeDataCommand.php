@@ -2,6 +2,7 @@
 
 use Illuminate\Console\Command;
 
+use Lovata\FakeDataShopaholic\Classes\ThemeSeeder\BioliaThemeSeeder;
 use Lovata\FakeDataShopaholic\Classes\ThemeSeeder\SneakersThemeSeeder;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -27,6 +28,7 @@ class GenerateFakeThemeDataCommand extends Command
      */
     protected static $arThemeList = [
         'sneakers' => SneakersThemeSeeder::class,
+        'biolia'   => BioliaThemeSeeder::class,
     ];
 
     /**

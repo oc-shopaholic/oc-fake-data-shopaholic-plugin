@@ -29,5 +29,6 @@
     ],
     'theme'     => [
         'sneakers' => 'Sneakers',
+        'biolia'   => 'Biolia',
     ],
 ];
