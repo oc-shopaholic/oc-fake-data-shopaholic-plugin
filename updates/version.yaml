@@ -3,6 +3,6 @@
 1.0.1:
     - 'Fixed error with tags in widget partial.'
 1.1.0:
-    - 'Added new catalog variant: fruits.'
+    - 'Added new catalog variant: food.'
 1.1.1:
-    - 'Fixed of property values in content set of fruits.'
+    - 'Fixed of property values in content set of food.'

@@ -83,7 +83,7 @@ class GenerateFakeDataCommand extends Command
             SeederRelatedProducts::class,
             SeederAccessories::class,
         ],
-        'fruits' => [
+        'food' => [
             SeederBrand::class,
             SeederRelatedProducts::class,
             SeederRelatedProductFromFile::class,
@@ -99,7 +99,7 @@ class GenerateFakeDataCommand extends Command
     protected static $arContentType = [
         'clothes',
         'sneakers',
-        'fruits',
+        'food',
     ];
 
     /**
@@ -134,7 +134,6 @@ class GenerateFakeDataCommand extends Command
             if (in_array($sClassName, $this->arSkipSeeder[$sContentType])) {
                 continue;
             }
-
             /** @var \Lovata\FakeDataShopaholic\Classes\Seeder\AbstractModelSeeder $obSeeder */
             $obSeeder = new $sClassName($sContentType, $iRepeatLimit);
             $obSeeder->run();

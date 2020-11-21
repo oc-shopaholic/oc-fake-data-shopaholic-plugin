@@ -6,7 +6,7 @@
     'field'     => [
         'clothes'  => 'Clothes',
         'sneakers' => 'Sneakers',
-        'fruits'   => 'Fruits',
+        'food'     => 'Food',
         'content'  => 'Content',
         'repeat'   => 'Repeat',
         'theme'    => 'Theme',
