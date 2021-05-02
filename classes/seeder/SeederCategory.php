@@ -33,6 +33,10 @@ class SeederCategory extends AbstractModelSeeder
             $obCategory->fillable[] = 'nest_right';
         });
 
+        if (empty($this->arRowData[2])) {
+            $this->arRowData[2] = null;
+        }
+
         parent::process();
 
         $this->obModel->code = $this->obModel->slug;
