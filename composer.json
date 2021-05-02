@@ -1,0 +1,8 @@
+{
+    "name": "lovata/fakedatashopaholic-plugin",
+    "type": "october-plugin",
+    "description": "Fill your database with fake data",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
