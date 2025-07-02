@@ -1,6 +1,6 @@
 <?php namespace Lovata\FakeDataShopaholic\Classes\Seeder;
 
-use October\Rain\Argon\Argon;
+use Carbon\Carbon;
 use Lovata\Shopaholic\Models\Product;
 
 /**
@@ -65,7 +65,7 @@ class SeederReviews extends AbstractModelSeeder
 
             $this->iMinuteCount += mt_rand(15, 180);
 
-            $obReview->created_at = Argon::now()->subMinutes($this->iMinuteCount);
+            $obReview->created_at = Carbon::now()->subMinutes($this->iMinuteCount);
             $obReview->save();
         }
     }

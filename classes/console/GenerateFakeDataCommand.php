@@ -109,7 +109,7 @@ class GenerateFakeDataCommand extends Command
     public function handle()
     {
         $sContentType = $this->option('content');
-        if (empty($sContentType)) {
+        if (!isset(self::$arContentType[$sContentType])) {
             $sContentType = $this->choice('Select content type', self::$arContentType, 0);
         }
 

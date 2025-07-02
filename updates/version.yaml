@@ -8,3 +8,5 @@
     - 'Fixed of property values in content set of fruits.'
 1.2.0:
     - 'Added composer.json to plugin'
+1.2.1:
+    - 'Fixed October v4 compatibility'
