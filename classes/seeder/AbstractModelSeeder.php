@@ -87,7 +87,7 @@ abstract class AbstractModelSeeder
                 $this->arRowData[$iKey] = null;
             }
         }
-        
+
         foreach ($this->arFieldList as $sFieldName) {
 
             switch ($sFieldName) {
@@ -144,7 +144,7 @@ abstract class AbstractModelSeeder
         }
 
         $obImage = new File();
-        $obImage->fromFile($this->sImagePath.$sFolderName.'/'.$sFileName);
+        $obImage->fromFile($this->sImagePath.'/'.$sFolderName.'/'.$sFileName);
         $this->obModel->preview_image()->add($obImage);
         $this->obModel->save();
     }
@@ -168,12 +168,12 @@ abstract class AbstractModelSeeder
         foreach ($arImageList as $sFileName) {
 
             $obImage = new File();
-            $obImage->fromFile($this->sImagePath.$sFolderName.'/'.$sFileName);
+            $obImage->fromFile($this->sImagePath.'/'.$sFolderName.'/'.$sFileName);
             $this->obModel->images()->add($obImage);
 
             if($bFirst) {
                 $obImage = new File();
-                $obImage->fromFile($this->sImagePath.$sFolderName.'/'.$sFileName);
+                $obImage->fromFile($this->sImagePath.'/'.$sFolderName.'/'.$sFileName);
                 $this->obModel->preview_image()->add($obImage);
                 $bFirst= false;
             }
